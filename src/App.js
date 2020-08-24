@@ -11,10 +11,13 @@ import PageNotFound from './components/PageNotFound';
 import Modal from './components/Modal';
 import { ProductContext } from './contexts/ProductsProvider';
 const App = () => {
-  const {products,modalOpen} = useContext(ProductContext);
+  const {products,modalOpen,alertMsg} = useContext(ProductContext);
   return (
     <Fragment>  
       <Navbar />
+      {
+        alertMsg && <div className={`alert alert-${alertMsg.alertType} text-center m-5`}>{alertMsg.msg}</div>
+      }
       <Switch>
         <Route exact path="/" component={ProductList} />
         <Route exact path="/details/:id" render={(props)=>products.length>0 ? <Details {...props} />: <Redirect to="/"/>} />

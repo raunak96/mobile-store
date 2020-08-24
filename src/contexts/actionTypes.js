@@ -7,7 +7,8 @@ const actionTypes = {
     UPDATE_CART_VALUES:'UPDATE_CART_VALUES',
     CLEAR_CART:'CLEAR_CART',
     MODAL_OPEN:'MODAL_OPEN',
-    MODAL_CLOSE:'MODAL_CLOSE'
+    MODAL_CLOSE:'MODAL_CLOSE',
+    SET_ALERT: 'SET_ALERT'
 };
 
 export default actionTypes;

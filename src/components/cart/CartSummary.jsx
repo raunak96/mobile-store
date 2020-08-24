@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { ProductContext } from '../../contexts/ProductsProvider';
 import { Link } from 'react-router-dom'
-
+import PayPalButton from "./PayPalButton";
 
 const CartSummary = () => {
     const {cartSubTotal,cartTax,cartTotal,clearCart} = useContext(ProductContext);
@@ -25,6 +25,10 @@ const CartSummary = () => {
                     <span className="text-title"> total :</span>
                     <strong> ₹{cartTotal*2000} </strong>
                 </h5>
+                <PayPalButton
+                  totalAmount={cartTotal}
+                  clearCart={clearCart}
+                />
             </div>
 		</div>
 	);

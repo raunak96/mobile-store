@@ -6,7 +6,7 @@ import { storeProducts } from "../data";
 
 export const ProductContext= createContext();
 const INITIAL_STATE =  {products: [],carts: [],modalOpen: false,modalProduct: null,product:null,
-    cartSubTotal: 0,cartTax: 0,cartTotal: 0
+    cartSubTotal: 0,cartTax: 0,cartTotal: 0,alertMsg:null
 };
 const rootReducer= (state,action)=>{
     switch (action.type) {
@@ -25,7 +25,9 @@ const rootReducer= (state,action)=>{
 		case actionTypes.MODAL_OPEN:
 			return { ...state, modalOpen: true, modalProduct: action.payload };
 		case actionTypes.MODAL_CLOSE:
-			return { ...state, modalOpen: false };
+            return { ...state, modalOpen: false };
+        case actionTypes.SET_ALERT:
+            return {...state, alertMsg:action.payload}
 		default:
 			return state;
 	}
@@ -49,6 +51,10 @@ const ProductsProvider = ({children}) => {
         dispatch({type:actionTypes.MODAL_OPEN,payload:product})
     }
     const closeModal = _=> dispatch({type:actionTypes.MODAL_CLOSE});
+    const setAlert= (alertObj)=> {
+        dispatch({type:actionTypes.SET_ALERT,payload:alertObj});
+        setTimeout(()=> dispatch({type:actionTypes.SET_ALERT,payload:null}),10000);
+    };
     
     useEffect(()=>{
         const cartSubTotal= state.carts.reduce((total,current)=>total+current.total,0);
@@ -69,7 +75,7 @@ const ProductsProvider = ({children}) => {
 	}, []);
     
     return (
-        <ProductContext.Provider value={{...state,setProducts,setProduct,addToCart,removeFromCart,removeItemFromCart,clearCart,openModal,closeModal}}>
+        <ProductContext.Provider value={{...state,setProducts,setProduct,addToCart,removeFromCart,removeItemFromCart,clearCart,openModal,closeModal,setAlert}}>
             {children}
         </ProductContext.Provider>
     );

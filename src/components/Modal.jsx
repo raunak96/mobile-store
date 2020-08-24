@@ -11,7 +11,7 @@ const Modal = () => {
 				<div className='my-modal col-8 mx-auto col-md-6 col-lg-4 text-center text-capitalize p-3'
 					style={{ maxHeight: "90vh" }}>
 					<h5>Item added to cart</h5>
-					<img src={img} alt='product' className='image-fluid' style={{maxHeight:'30vh' }}/>
+					<img src={`../${img}`} alt='product' className='image-fluid' style={{maxHeight:'30vh' }}/>
 					<h5>{title}</h5>
 					<h5 className='text-muted'>
 						price : <span>₹</span>
