@@ -7,6 +7,7 @@ const Details = ({match}) => {
 	const {products,addToCart,openModal,product,setProduct}= useContext(ProductContext);
 	useEffect(()=>{
 		setProduct(products.find(prod=>prod.id===parseInt(match.params.id)));
+		// eslint-disable-next-line
 	},[]);
     return product!==undefined ? product!==null?(
 		<div className='container py-5'>
