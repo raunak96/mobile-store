@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/mobile-store/static/css/main.496a8104.chunk.css",
+    "main.js": "/mobile-store/static/js/main.e9691714.chunk.js",
+    "main.js.map": "/mobile-store/static/js/main.e9691714.chunk.js.map",
+    "runtime-main.js": "/mobile-store/static/js/runtime-main.f15cfd75.js",
+    "runtime-main.js.map": "/mobile-store/static/js/runtime-main.f15cfd75.js.map",
+    "static/css/2.11829350.chunk.css": "/mobile-store/static/css/2.11829350.chunk.css",
+    "static/js/2.c938b92d.chunk.js": "/mobile-store/static/js/2.c938b92d.chunk.js",
+    "static/js/2.c938b92d.chunk.js.map": "/mobile-store/static/js/2.c938b92d.chunk.js.map",
+    "index.html": "/mobile-store/index.html",
+    "precache-manifest.6a0f86c5cbbf23aa64634234dd430bd9.js": "/mobile-store/precache-manifest.6a0f86c5cbbf23aa64634234dd430bd9.js",
+    "service-worker.js": "/mobile-store/service-worker.js",
+    "static/css/2.11829350.chunk.css.map": "/mobile-store/static/css/2.11829350.chunk.css.map",
+    "static/css/main.496a8104.chunk.css.map": "/mobile-store/static/css/main.496a8104.chunk.css.map",
+    "static/js/2.c938b92d.chunk.js.LICENSE.txt": "/mobile-store/static/js/2.c938b92d.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/mobile-store/static/media/logo.9f7e506d.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f15cfd75.js",
+    "static/css/2.11829350.chunk.css",
+    "static/js/2.c938b92d.chunk.js",
+    "static/css/main.496a8104.chunk.css",
+    "static/js/main.e9691714.chunk.js"
+  ]
+}
