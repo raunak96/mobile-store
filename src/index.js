@@ -7,7 +7,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import ProductsProvider from "./contexts/ProductsProvider";
 
 ReactDOM.render(
-	<Router>
+	<Router basename={process.env.PUBLIC_URL}>
 		<ProductsProvider>
 			<App />
 		</ProductsProvider>
